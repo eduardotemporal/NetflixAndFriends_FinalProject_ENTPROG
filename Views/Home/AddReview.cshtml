@@ -1,0 +1,172 @@
+﻿
+
+ 
+<head>
+
+    <meta charset="ISO-8859-1">
+
+    <link href="C:\Users\Ed Temporal\source\repos\MyInventory\wwwroot\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title>Home</title>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-color:black">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" style=" font-family: 'Bebas Neue', cursive; font-size: 400% "><span style="color:red">&nbsp &nbspNetflix & </span><span style="color:white"> Friends</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+            </ul>
+
+            <img src="~/Picture1.png" height="12%" width="4%"> &nbsp &nbsp &nbsp &nbsp
+            <form action="Settings.html">
+                <input style="font-family: 'Bebas Neue', cursive; font-size: 120%; color:white; background:black; border-color:black" type="submit" value="Settings">
+            </form>&nbsp &nbsp
+
+            <form action="Logout.html">
+                <input style="font-family: 'Bebas Neue', cursive; font-size: 120%; color:white; background:black; border-color:black" type="submit" value="Logout">
+            </form>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+
+        </div>
+
+    </div>
+
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-color:black">
+    <div class="container-fluid">
+
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+            </ul>
+
+            <form action="Movies.html">
+                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Movies">
+            </form>&nbsp &nbsp &nbsp &nbsp
+            <form action="Series.html">
+                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Series">
+            </form>&nbsp &nbsp &nbsp &nbsp
+            <form action="Documentaries.html">
+                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Documentaries">
+            </form>&nbsp &nbsp &nbsp &nbsp
+            <form action="Friends.html">
+                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Friends">
+            </form>&nbsp &nbsp &nbsp &nbsp
+
+            <form action="Search.html">
+                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Search">
+            </form>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+        </div>
+    </div>
+</nav>
+</head>
+<body>
+    <br>
+    <br>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-color:black">
+        <div class="container-fluid">
+
+
+            <div class="card-body" style="background-color:black;border:0px solid #000">
+                <div class="container-fluid">
+
+                    <div class="card border-0" style="max-width: 40rem; background-color:#000">
+                        <center>
+                            &nbsp &nbsp &nbsp &nbsp
+                            <img src="~/Post9.jpg" height="95%" width="70%">
+                            <br>
+                            <br>
+                            <h4 style="color:white; font-family: 'Bebas Neue', cursive; font-size: 200% "> Friends</h4>
+
+                            <div class="container-fluid" style="max-width: 30rem; background-color:black">
+                                <div style="max-width: 30rem; background-color:black">
+
+                                    <input type="submit" class="btn" style="border:1px solid #fff; color:white" value="Synopsis">
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            </center>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-body" style="background-color:black;border:0px solid #000">
+                <div class="container-fluid">
+
+                    <div class="card border-0" style="max-width: 40rem; background-color:#000">
+                        <center>
+
+
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border:0px solid #000">
+                                <div class="container-fluid">
+
+
+                                    <center>
+                                        <div class="collapse navbar-collapse">
+                                            <ul class="navbar-nav me-auto">
+                                            </ul>
+
+                                            <form action="Movies.html">
+                                                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Top Reviews">
+                                            </form>&nbsp &nbsp &nbsp &nbsp
+                                            <form action="Series.html">
+                                                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Reviews From Friends">
+                                            </form>&nbsp &nbsp &nbsp &nbsp
+                                            <form action="Documentaries.html">
+                                                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Discussion Board">
+                                            </form>&nbsp &nbsp &nbsp &nbsp
+                                            <form action="Friends.html">
+                                                <input style="font-family: 'Bebas Neue', cursive; font-size: 185%; color:white; background:black; border-color:black" type="submit" value="Post a review">
+                                            </form>&nbsp &nbsp &nbsp &nbsp
+
+
+                                        </div>
+                                    </center>
+                                </div>
+
+                            </nav>
+
+
+                            <form asp-controller="Home" asp-action="Home" method="post">
+
+                                <textarea style="border:0px solid #000" name="w3review" rows="15" cols="100"> 
+
+                            </textarea>
+                                <br><br>
+
+                                &nbsp  &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp  &nbsp 
+
+                          
+
+                                <button type="submit" class="btn btn-primary">
+                                    sUBMIT
+                                </button>
+
+                            </form>
+                                </center>
+                              
+                    </div>
+                    <br> <br>
+                </div>
+
+        </div>
+        </div>
+    </nav>
+</body>

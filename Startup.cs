@@ -9,6 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using NetflixAndFriends_FinalProject_ENTPROG.Data;
+using NetflixAndFriends_FinalProject_ENTPROG.Models;
+using Microsoft.EntityFrameworkCore;
+
+using Microsoft.AspNetCore.Identity;
+
 namespace NetflixAndFriends_FinalProject_ENTPROG
 {
     public class Startup
@@ -23,7 +29,12 @@ namespace NetflixAndFriends_FinalProject_ENTPROG
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(option =>
+                option.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
+
+            services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +54,7 @@ namespace NetflixAndFriends_FinalProject_ENTPROG
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -51,6 +62,7 @@ namespace NetflixAndFriends_FinalProject_ENTPROG
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

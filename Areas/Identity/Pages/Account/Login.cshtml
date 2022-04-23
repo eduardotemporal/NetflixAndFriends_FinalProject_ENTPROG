@@ -1,0 +1,77 @@
+﻿@page
+@model LoginModel
+
+
+@{
+    ViewData["Title"] = "Log-in";
+}
+
+
+<center>
+    <br><br>
+    <div class="container-fluid" style=" font-family: 'Bebas Neue', cursive; font-size: 600% ">
+        <span style="color:red">Netflix & </span><span style="color:white"> Friends</span>
+
+    </div>
+</center>
+
+<center>
+    <div class="card border-primary mb-3" style="max-width: 30rem; background-color:#fff ">
+
+        <div class="card-body">
+            <div class="container-fluid">
+
+                <section>
+
+                    <form id="account" method="post" style="text-align:left">
+
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label style="font-family: 'Bebas Neue', cursive; font-size: 200%; color:black" asp-for="Input.Email"></label>
+                            <div class="form-control">
+                                <img src="~/usericon.png" alt="error" height="10%" width="10%">
+                                <input asp-for="Input.Email" class="form-control" placeholder=" Enter email" />
+                            </div>
+                            
+                        </div>
+                            <hr>
+                            <div class="form-group">
+                                <label style="font-family: 'Bebas Neue', cursive; font-size: 200%; color:black" asp-for="Input.Password"></label>
+                                <div class="form-control">
+                                    <img src="~/passicon.png" height="12%" width="10%">
+                                    <input asp-for="Input.Password" class="form-control" placeholder=" Enter password" />
+                                </div>
+                                
+                            </div>
+                            <hr />
+                                <center>
+                                    <div class="clearfix">
+                                        <button type="submit" class="btn btn-outline-primary">Log in</button>
+                                    </div>
+                                </center>
+                               
+                            
+                    </form>
+
+                </section>
+                <hr>
+                <h6 style=" font-family: 'Bebas Neue'; color:#000"> OR </h6>
+                <hr>
+
+
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-dark">Register as a new user</a>
+
+            </div>
+        </div>
+
+    </div>
+
+</center>
+<br />
+<br />
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,92 @@
+﻿@page
+@model RegisterModel
+
+<center>
+    <br><br>
+    <div class="container-fluid" style=" font-family: 'Bebas Neue', cursive; font-size: 600% ">
+        <span style="color:red">Netflix & </span><span style="color:white"> Friends</span>
+
+    </div>
+</center>
+
+
+<center>
+    <div class="card border-primary mb-3" style="max-width: 30rem;">
+
+
+        <div class="card-body">
+            <div class="container-fluid">
+                <center>
+                    <h4 style=" font-family: 'Bebas Neue', cursive; font-size: 400%; color:red">Register </h4>
+                </center>
+                <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+                    <div style="text-align:left">
+                        <label for="Input.FN"><h4 style=" font-family: 'Bebas Neue', cursive; font-size: 200%; color:black">Firstname </h4></label>
+                        <div class="form-control">
+                            &nbsp &nbsp
+                            <input class="form-control" type="text" asp-for="Input.FN" placeholder=" Enter Firstname">
+                            <span asp-validation-for="Input.FN" class="text-danger"></span>
+                        </div>
+                        <hr>
+
+                        <label for="Input.LN"><h4 style=" font-family: 'Bebas Neue', cursive; font-size: 200%; color:black">Lastname </h4></label>
+                        <div class="form-control">
+                            &nbsp &nbsp
+                            <input class="form-control" type="text" asp-for="Input.LN" placeholder=" Enter Lastname">
+                            <span asp-validation-for="Input.LN" class="text-danger"></span>
+                        </div>
+                        <hr>
+
+                        <label for="psw-repeat"><h4 style=" font-family: 'Bebas Neue', cursive; font-size: 200%; color:black">Email </h4></label>
+                        <br>
+                        <div class="form-control">
+                            &nbsp &nbsp
+                            <input class="form-control" type="email" asp-for="Input.Email" placeholder=" Enter email">
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+
+                        <hr>
+
+                        <label for="psw-repeat"><h4 style=" font-family: 'Bebas Neue', cursive; font-size: 200%; color:black">Password </h4></label>
+                        <br>
+                        <div class="form-control">
+                            &nbsp &nbsp
+                            <input class="form-control" type="password" asp-for="Input.Password" placeholder=" Enter password">
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+
+                        <hr>
+                        <label for="psw-repeat"><h4 style=" font-family: 'Bebas Neue', cursive; font-size: 200%; color:black">Re-enter Password </h4></label>
+                        <br>
+                        <div class="form-control">
+                            &nbsp &nbsp
+                            <input class="form-control" type="password" asp-for="Input.ConfirmPassword" placeholder=" Re-enter password" required>
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <hr>
+
+
+                    </div>
+
+
+
+                    <div class="clearfix">
+                        <input type="submit" class="btn btn-outline-primary" value="Register">
+                    </div>
+                </form>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</center>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
